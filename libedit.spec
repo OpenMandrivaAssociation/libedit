@@ -7,7 +7,7 @@
 
 Name:           libedit
 Version:        2.10
-Release:        %mkrel 0.%{snap}.1
+Release:        %mkrel 0.%{snap}.2
 Epoch:          0
 Summary:        Provides generic line editing functions similar to those found in GNU Readline
 License:        BSD-style
@@ -40,6 +40,7 @@ Obsoletes:      edit-devel < %{epoch}:%{version}-%{release}
 Provides:       edit-devel = %{epoch}:%{version}-%{release}
 Requires:       %{libname} = %{epoch}:%{version}-%{release}
 Requires:       ncurses-devel
+Obsoletes:	%libname-devel
 
 %description -n %{libnamedevel}
 This is an autotool- and libtoolized port of the NetBSD Editline
