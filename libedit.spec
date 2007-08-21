@@ -41,6 +41,9 @@ Provides:       edit-devel = %{epoch}:%{version}-%{release}
 Requires:       %{libname} = %{epoch}:%{version}-%{release}
 Requires:       ncurses-devel
 Obsoletes:	%libname-devel
+Obsoletes:  editline
+Provides:   editline = %{epoch}:%version-%release
+Obsoletes:  libeditline0
 
 %description -n %{libnamedevel}
 This is an autotool- and libtoolized port of the NetBSD Editline
@@ -55,6 +58,11 @@ Summary:        Static development files for %{rname}
 Group:          Development/C
 Provides:       edit-static-devel = %{epoch}:%{version}-%{release}
 Requires:       %{libnamedevel} = %{epoch}:%{version}-%{release}
+Obsoletes:  libeditline-devel
+Provides:  libeditline-devel = %{epoch}:%{version}-%{release}
+Obsoletes:  libeditline0-devel
+Obsoletes:  editline-devel
+
 
 %description -n %{libnamestaticdevel}
 This is an autotool- and libtoolized port of the NetBSD Editline
@@ -99,6 +107,10 @@ This package contains static development files for %{rname}.
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.la
+
+%files
+%defattr(0644,root,root,0755)
+%doc ChangeLog INSTALL THANKS
 %{_mandir}/man3/*
 %{_mandir}/man5/*
 
