@@ -1,4 +1,4 @@
-%define snap    20070813
+%define snap    20070831
 %define major   0
 
 %define libname %mklibname edit %{major}
@@ -7,7 +7,7 @@
 
 Name:           libedit
 Version:        2.10
-Release:        %mkrel 0.%{snap}.3
+Release:        %mkrel 0.%{snap}.1
 Epoch:          0
 Summary:        Provides generic line editing functions similar to those found in GNU Readline
 License:        BSD-style
@@ -24,8 +24,8 @@ provides generic line editing, history, and tokenization functions,
 similar to those found in GNU Readline.
 
 %package -n %{libname}
-Group:      System/Libraries
-Summary:    Provides generic line editing functions similar to those found in GNU Readline
+Group:          System/Libraries
+Summary:        Provides generic line editing functions similar to those found in GNU Readline
 
 %description -n %{libname}
 This is an autotool- and libtoolized port of the NetBSD Editline library 
@@ -40,10 +40,10 @@ Obsoletes:      edit-devel < %{epoch}:%{version}-%{release}
 Provides:       edit-devel = %{epoch}:%{version}-%{release}
 Requires:       %{libname} = %{epoch}:%{version}-%{release}
 Requires:       ncurses-devel
-Obsoletes:	%libname-devel
-Obsoletes:  editline
-Provides:   editline = %{epoch}:%version-%release
-Obsoletes:  libeditline0
+Obsoletes:	%{libname}-devel
+Obsoletes:      editline < %{epoch}:%{version}-%{release}
+Provides:       editline = %{epoch}:%{version}-%{release}
+Obsoletes:      libeditline0
 
 %description -n %{libnamedevel}
 This is an autotool- and libtoolized port of the NetBSD Editline
@@ -58,10 +58,10 @@ Summary:        Static development files for %{rname}
 Group:          Development/C
 Provides:       edit-static-devel = %{epoch}:%{version}-%{release}
 Requires:       %{libnamedevel} = %{epoch}:%{version}-%{release}
-Obsoletes:  libeditline-devel
-Provides:  libeditline-devel = %{epoch}:%{version}-%{release}
-Obsoletes:  libeditline0-devel
-Obsoletes:  editline-devel
+Obsoletes:      libeditline-devel < %{epoch}:%{version}-%{release}
+Provides:       libeditline-devel = %{epoch}:%{version}-%{release}
+Obsoletes:      libeditline0-devel
+Obsoletes:      editline-devel
 
 
 %description -n %{libnamestaticdevel}
@@ -107,6 +107,7 @@ This package contains static development files for %{rname}.
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.la
+%{_libdir}/pkgconfig/libedit.pc
 
 %files
 %defattr(0644,root,root,0755)
