@@ -15,6 +15,7 @@ Group:          System/Libraries
 URL:            http://www.thrysoee.dk/editline/
 Source0:        http://www.thrysoee.dk/editline/%{name}-%{snap}-%{version}.tar.gz
 BuildRequires:  ncurses-devel
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 This is an autotool- and libtoolized port of the NetBSD Editline library 
