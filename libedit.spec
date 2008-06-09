@@ -89,9 +89,13 @@ This package contains static development files for %{name}.
 %{_bindir}/find examples -type f ! -name "*.c" | %{_bindir}/xargs %{__rm}
 %{__rm} -r examples/.{deps,libs}
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %clean
 %{__rm} -rf %{buildroot}
