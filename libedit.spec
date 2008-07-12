@@ -1,14 +1,14 @@
-%define snap 20070831
-%define major 0
+%define snap 20080712
 
+%define major 0
 %define libname %mklibname edit %{major}
 %define libnamedevel %mklibname edit -d
 %define libnamestaticdevel %mklibname edit -d -s
 
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
-Version:	2.10
-Release:	%mkrel 0.%{snap}.3
+Version:	2.11
+Release:	%mkrel 0.%{snap}.1
 Epoch:		0
 License:	BSD-style
 Group:		System/Libraries
