@@ -1,4 +1,4 @@
-%define snap 20080712
+%define snap 20090722
 
 %define major 0
 %define libname %mklibname edit %{major}
@@ -7,8 +7,8 @@
 
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
-Version:	2.11
-Release:	%mkrel 0.%{snap}.2
+Version:	3.0
+Release:	%mkrel 0.%{snap}.1
 Epoch:		0
 License:	BSD-style
 Group:		System/Libraries
@@ -104,7 +104,7 @@ This package contains static development files for %{name}.
 %defattr(0644,root,root,0755)
 %doc ChangeLog INSTALL THANKS
 %defattr(-,root,root,0755)
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}*
 
 %files -n %{libnamedevel}
 %defattr(0644,root,root,0755)
