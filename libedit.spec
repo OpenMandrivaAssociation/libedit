@@ -8,7 +8,7 @@
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
 Version:	3.0
-Release:	%mkrel 0.%{snap}.2
+Release:	%mkrel 0.%{snap}.3
 Epoch:		0
 License:	BSD-style
 Group:		System/Libraries
