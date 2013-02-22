@@ -7,13 +7,13 @@
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
 Version:	3.0
-Release:	0.%{snap}.2
+Release:	0.%{snap}.3
 Epoch:		0
 License:	BSD-style
 Group:		System/Libraries
 URL:		http://www.thrysoee.dk/editline/
 Source0:	http://www.thrysoee.dk/editline/%{name}-%{snap}-%{version}.tar.gz
-BuildRequires:	pkgconfig(ncurses) >= 5.9
+BuildRequires:	pkgconfig(ncursesw) >= 5.9
 
 %description
 This is an autotool- and libtoolized port of the NetBSD Editline library 
@@ -36,7 +36,6 @@ similar to those found in GNU Readline.
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
-Requires:	pkgconfig(ncurses)
 Provides:	edit-devel = %{EVRD}
 Provides:	libedit-devel = %{EVRD}
 Provides:	editline = %{EVRD}
