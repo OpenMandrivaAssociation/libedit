@@ -1,4 +1,4 @@
-%define snap 20110802
+%define snap 20121213
 
 %define major 0
 %define libname %mklibname edit %{major}
@@ -7,7 +7,7 @@
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
 Version:	3.0
-Release:	0.%{snap}.3
+Release:	0.%{snap}.1
 Epoch:		0
 License:	BSD-style
 Group:		System/Libraries
@@ -61,7 +61,7 @@ This package contains development files for %{name}.
 
 # Allows us to include the examples in separate %%doc directory
 find examples -type f ! -name "*.c" | %{_bindir}/xargs %__rm
-%__rm -r examples/.{deps,libs}
+%__rm -r examples/.libs
 
 %files -n %{libname}
 %doc ChangeLog INSTALL THANKS
