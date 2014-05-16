@@ -1,12 +1,13 @@
-%define snap 20121213
+%define snap 20140213
 %define major	0
 %define libname %mklibname edit %{major}
 %define devname %mklibname edit -d
 
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
+
 Name:		libedit
-Version:	3.0
-Release:	0.%{snap}.1
+Version:	3.1
+Release:	0.%{snap}
 License:	BSD-style
 Group:		System/Libraries
 Url:		http://www.thrysoee.dk/editline/
@@ -21,6 +22,7 @@ similar to those found in GNU Readline.
 
 %package -n	%{libname}
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
+
 Group:		System/Libraries
 Conflicts:	libedit < %{EVRD}
 
@@ -32,6 +34,7 @@ similar to those found in GNU Readline.
 
 %package -n	%{devname}
 Summary:	Development files for %{name}
+
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
