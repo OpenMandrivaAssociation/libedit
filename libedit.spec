@@ -7,7 +7,7 @@ Summary:	Provides generic line editing functions similar to those found in GNU R
 
 Name:		libedit
 Version:	3.1
-Release:	1.%{snap}.1
+Release:	1.%{snap}.2
 License:	BSD-style
 Group:		System/Libraries
 Url:		http://www.thrysoee.dk/editline/
