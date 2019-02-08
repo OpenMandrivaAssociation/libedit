@@ -1,4 +1,4 @@
-%define snap 20180525
+%define snap 20181209
 %define major	0
 %define libname %mklibname edit %{major}
 %define devname %mklibname edit -d
@@ -7,7 +7,7 @@ Summary:	Provides generic line editing functions similar to those found in GNU R
 
 Name:		libedit
 Version:	3.1
-Release:	1.%{snap}.2
+Release:	1.%{snap}.3
 License:	BSD-style
 Group:		System/Libraries
 Url:		http://www.thrysoee.dk/editline/
