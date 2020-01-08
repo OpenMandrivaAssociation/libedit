@@ -1,7 +1,8 @@
 %define snap 20191231
-%define major	0
+%define major 0
 %define libname %mklibname edit %{major}
 %define devname %mklibname edit -d
+%global optflags %{optflags} -Oz
 
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
@@ -19,25 +20,25 @@ This is an autotool- and libtoolized port of the NetBSD Editline library
 provides generic line editing, history, and tokenization functions, 
 similar to those found in GNU Readline.
 
-%package -n	%{libname}
+%package -n %{libname}
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Group:		System/Libraries
 Conflicts:	libedit < %{EVRD}
 
-%description -n	%{libname}
+%description -n %{libname}
 This is an autotool- and libtoolized port of the NetBSD Editline library 
 (libedit). This Berkeley-style licensed command line editor library 
 provides generic line editing, history, and tokenization functions, 
 similar to those found in GNU Readline.
 
-%package -n	%{devname}
+%package -n %{devname}
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
 Conflicts:	libedit < %{EVRD}
 
-%description -n	%{devname}
+%description -n %{devname}
 This package contains development files for %{name}.
 
 %prep
