@@ -7,7 +7,7 @@
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
 Version:	3.1
-Release:	1.%{snap}.4
+Release:	1.%{snap}.5
 License:	BSD-style
 Group:		System/Libraries
 Url:		http://www.thrysoee.dk/editline/
@@ -54,6 +54,9 @@ This package contains development files for %{name}.
 # Allows us to include the examples in separate %%doc directory
 find examples -type f ! -name "*.c" | %{_bindir}/xargs rm
 rm -r examples/.libs
+
+# Fix conflict with libreadline
+mv %{buildroot}%{_mandir}/man3/history.3 %{buildroot}%{_mandir}/man3/libedit-history.3
 
 %files -n %{libname}
 %{_libdir}/libedit.so.%{major}*
