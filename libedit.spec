@@ -1,4 +1,4 @@
-%define snap 20191231
+%define snap 20210910
 %define major 0
 %define libname %mklibname edit %{major}
 %define devname %mklibname edit -d
@@ -42,7 +42,7 @@ Conflicts:	libedit < %{EVRD}
 This package contains development files for %{name}.
 
 %prep
-%autosetup -n %{name}-%{snap}-%{version}
+%autosetup -n %{name}-%{snap}-%{version} -p1
 
 %build
 %configure --disable-static
@@ -67,6 +67,6 @@ mv %{buildroot}%{_mandir}/man3/history.3 %{buildroot}%{_mandir}/man3/libedit-his
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/libedit.pc
-%{_mandir}/man3/*
-%{_mandir}/man5/*
-%{_mandir}/man7/*
+%doc %{_mandir}/man3/*
+%doc %{_mandir}/man5/*
+%doc %{_mandir}/man7/*
