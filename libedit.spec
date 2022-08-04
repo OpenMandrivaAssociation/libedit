@@ -25,7 +25,7 @@ Url:		http://www.thrysoee.dk/editline/
 Source0:	http://www.thrysoee.dk/editline/%{name}-%{snap}-%{version}.tar.gz
 BuildRequires:	pkgconfig(ncursesw) >= 5.9
 %if %{with compat32}
-BuildRequires:	devel(libncursesw)
+BuildRequires:	devel(libncurses)
 %endif
 
 %description
