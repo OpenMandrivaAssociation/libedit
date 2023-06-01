@@ -1,4 +1,4 @@
-%define snap 20210910
+%define snap 20221030
 %define major 0
 %define oldlibname %mklibname edit 0
 %define libname %mklibname edit
@@ -10,15 +10,13 @@
 %else
 %bcond_with compat32
 %endif
-%if %{with compat32}
 %define lib32name libedit
 %define dev32name libedit-devel
-%endif
 
 Summary:	Provides generic line editing functions similar to those found in GNU Readline
 Name:		libedit
 Version:	3.1
-Release:	1.%{snap}.7
+Release:	1.%{snap}.1
 License:	BSD-style
 Group:		System/Libraries
 Url:		http://www.thrysoee.dk/editline/
