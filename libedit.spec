@@ -19,7 +19,7 @@ Version:	3.1
 Release:	1.%{snap}.1
 License:	BSD-style
 Group:		System/Libraries
-Url:		http://www.thrysoee.dk/editline/
+Url:		https://www.thrysoee.dk/editline/
 Source0:	http://www.thrysoee.dk/editline/%{name}-%{snap}-%{version}.tar.gz
 BuildRequires:	pkgconfig(ncursesw) >= 5.9
 %if %{with compat32}
