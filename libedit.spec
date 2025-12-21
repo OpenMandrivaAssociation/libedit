@@ -21,6 +21,11 @@ License:	BSD-style
 Group:		System/Libraries
 Url:		https://www.thrysoee.dk/editline/
 Source0:	http://www.thrysoee.dk/editline/%{name}-%{snap}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(ncursesw) >= 5.9
 %if %{with compat32}
 BuildRequires:	devel(libncurses)
